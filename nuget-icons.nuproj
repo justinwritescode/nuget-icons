@@ -3,6 +3,8 @@
   <TargetFramework>netstandard1.0</TargetFramework>
   <Description>A collection of randomly-colored NuGet icons</Description>
   <Summary>$(Description)</Summary>
+  <Title>nuget-icons</Title>
+  <PackageTags>nuget icons</PackageTags>
 </PropertyGroup>
  <ItemGroup>
   <PackageFile Include="nuget-*.png" PackagePath="contentFiles/%(Filename)%(Extension)" />
