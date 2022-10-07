@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.Build.NoTargets">
+<PropertyGroup>
+  <TargetFramework>netstandard2.0</TargetFramework>
+  <Description>A collection of randomly-colored NuGet icons</Description>
+  <Summary>$(Description)</Summary>
+  <Title>nuget-icons</Title>
+  <PackageTags>nuget icons</PackageTags>
+  <PackageReadmeFile>README.md</PackageReadmeFile>
+</PropertyGroup>
+ <ItemGroup>
+  <PackageFile Include="../icons/nuget-*.png" PackagePath="contentFiles/%(Filename)%(Extension)" />
+  <PackageFile Include="../../README.md" PackagePath="README.md" />
+ </ItemGroup>
+ <ItemGroup>
+   <PackageReference Include="Microsoft.Build.Utilities.Core" PrivateAssets="All" />
+ </ItemGroup>
+</Project>
