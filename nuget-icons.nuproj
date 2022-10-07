@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.Build.NoTargets">
+<PropertyGroup>
+  <TargetFramework>netstandard1.0</TargetFramework>
+  <Description>A collection of randomly-colored NuGet icons</Description>
+</PropertyGroup>
+ <ItemGroup>
+  <PackageFile Include="nuget-*.png" PackFolder="content" />
+ </ItemGroup>
+</Project>
