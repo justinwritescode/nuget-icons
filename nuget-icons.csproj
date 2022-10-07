@@ -7,6 +7,9 @@
   <PackageTags>nuget icons</PackageTags>
 </PropertyGroup>
  <ItemGroup>
-  <PackageFile Include="nuget-*.png" PackagePath="contentFiles/%(Filename)%(Extension)" />
+  <PackageFile Include="icons/nuget-*.png" PackagePath="contentFiles/%(Filename)%(Extension)" />
+ </ItemGroup>
+ <ItemGroup>
+   <PackageReference Include="Microsoft.Build.Utilities" />
  </ItemGroup>
 </Project>
