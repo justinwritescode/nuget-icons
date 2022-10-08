@@ -1,0 +1,8 @@
+<Project>
+  <UsingTask TaskName="GetRandomIcon" AssemblyFile="../lib/netstandard2.0/nuget-icons.dll" />
+  <Target Name="GetRandomIcon" Returns="$(SelectedIcon)">
+    <GetRandomIcon>
+      <Output TaskParameter="Icon" PropertyName="SelectedIcon" />
+    </GetRandomIcon>
+  </Target>
+</Project>
