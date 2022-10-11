@@ -8,3 +8,4 @@ edit_uri: "tree/main/docs"
 docs_dir: docs
 nav:
   - README.md
+  - SUPPORT.md
