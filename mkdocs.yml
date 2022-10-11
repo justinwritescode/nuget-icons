@@ -6,3 +6,5 @@ repo_url: https://github.com/justinwritescode/nuget-icons
 repo_name: justinwritescode/nuget-icons
 edit_uri: "tree/main/docs"
 docs_dir: docs
+nav:
+  - Home: README.md
