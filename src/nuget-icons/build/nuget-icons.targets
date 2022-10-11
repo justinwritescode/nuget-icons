@@ -1,8 +1,24 @@
+<!--
+ * nuget-icons.targets
+ * 
+ *   Created: 2022-10-07-08:52:09
+ *   Modified: 2022-11-11-03:46:26
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
 <Project>
-  <UsingTask TaskName="GetRandomIcon" AssemblyFile="../lib/netstandard2.0/nuget-icons.dll" />
-  <Target Name="GetRandomIcon" Returns="$(SelectedIcon)">
-    <GetRandomIcon>
-      <Output TaskParameter="Icon" PropertyName="SelectedIcon" />
-    </GetRandomIcon>
+  <UsingTask TaskName="GetRandomNuGetIcon" AssemblyFile="../lib/netstandard2.0/nuget-icons.dll" />
+  <ItemGroup>
+    <Icons Include="../contentFiles/nuget*.png" />
+  </ItemGroup>
+  <Target Name="GetRandomNuGetIcon" Returns="$(SelectedIcon)">
+    <GetRandomNuGetIcon Key="$(MSBuildProjectName)">
+      <Output TaskParameter="IconUrl" PropertyName="SelectedIcon" />
+    </GetRandomNuGetIcon>
+    <Message Text="$(SelectedIcon)" Importance="High" />
   </Target>
 </Project>

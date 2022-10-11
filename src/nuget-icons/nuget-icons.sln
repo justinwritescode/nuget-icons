@@ -1,0 +1,35 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nuget-icons", "nuget-icons.csproj", "{54237E73-0CF5-4627-8144-8FC47FC74D67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6E2EC9C6-FED3-42DE-84F9-04C2FED3E2C6}"
+EndProject
+Global
+    GlobalSection(SolutionConfigurationPlatforms) = preSolution
+        Testing|Any CPU = Testing|Any CPU
+        Local|Any CPU = Local|Any CPU
+        Debug|Any CPU = Debug|Any CPU
+        Staging|Any CPU = Staging|Any CPU
+        Release|Any CPU = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(ProjectConfigurationPlatforms) = postSolution
+        {54237E73-0CF5-4627-8144-8FC47FC74D67}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+        {54237E73-0CF5-4627-8144-8FC47FC74D67}.Testing|Any CPU.Build.0 = Testing|Any CPU
+        {54237E73-0CF5-4627-8144-8FC47FC74D67}.Local|Any CPU.ActiveCfg = Local|Any CPU
+        {54237E73-0CF5-4627-8144-8FC47FC74D67}.Local|Any CPU.Build.0 = Local|Any CPU
+        {54237E73-0CF5-4627-8144-8FC47FC74D67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {54237E73-0CF5-4627-8144-8FC47FC74D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {54237E73-0CF5-4627-8144-8FC47FC74D67}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+        {54237E73-0CF5-4627-8144-8FC47FC74D67}.Staging|Any CPU.Build.0 = Staging|Any CPU
+        {54237E73-0CF5-4627-8144-8FC47FC74D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {54237E73-0CF5-4627-8144-8FC47FC74D67}.Release|Any CPU.Build.0 = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(SolutionProperties) = preSolution
+        HideSolutionNode = FALSE
+    EndGlobalSection
+    GlobalSection(NestedProjects) = preSolution
+        {54237E73-0CF5-4627-8144-8FC47FC74D67} = {6E2EC9C6-FED3-42DE-84F9-04C2FED3E2C6}
+    EndGlobalSection
+    GlobalSection(ExtensibilityGlobals) = postSolution
+        SolutionGuid = {8E1EFE26-90D6-445B-A49E-BB86BD2CEAB5}
+    EndGlobalSection
+EndGlobal

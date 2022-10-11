@@ -1,4 +1,16 @@
-<Project Sdk="Microsoft.Build.NoTargets">
+<!--
+ * nuget-icons.csproj
+ * 
+ *   Created: 2022-10-16-12:26:31
+ *   Modified: 2022-11-11-03:28:07
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="Microsoft.NET.Sdk">
 <PropertyGroup>
   <TargetFramework>netstandard2.0</TargetFramework>
   <Description>A collection of randomly-colored NuGet icons</Description>
@@ -6,13 +18,31 @@
   <Title>nuget-icons</Title>
   <PackageTags>nuget icons</PackageTags>
   <PackageReadmeFile>README.md</PackageReadmeFile>
+  <RootNamespace>NuGet.Icons</RootNamespace>
+  <AssemblyName>nuget-icons</AssemblyName>
+  <PackageId>nuget-icons</PackageId>
+  <!-- <OutputPath>lib/</OutputPath> -->
+  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 </PropertyGroup>
  <ItemGroup>
    <PackageReference Include="Microsoft.Build.Utilities.Core" PrivateAssets="All" />
+   <PackageReference Include="Svg" PrivateAssets="None" IncludeAssets="Compile; Build; Lib; ContentFiles" />
+   <PackageReference Include="System.Drawing.Common" />
  </ItemGroup>
  <ItemGroup>
-  <PackageFile Include="../icons/nuget-*.png" PackagePath="contentFiles/%(Filename)%(Extension)" />
+  <PackageFile Include="../../icons/nuget-*.png" PackagePath="contentFiles/%(Filename)%(Extension)" />
   <PackageFile Include="../../README.md" PackagePath="README.md" />
   <PackageFile Include="build/nuget-icons.targets" PackagePath="build/nuget-icons.targets" />
  </ItemGroup>
+ <ItemGroup>
+   <EmbeddedResource Include="./IconComponents/Blank.svg" Pack="true" LogicalName="NuGet.Icons.IconComponents.Blank.svg" />
+   <EmbeddedResource Include="./IconComponents/CircularTile.svg" Pack="true" LogicalName="NuGet.Icons.IconComponents.CircularTile.svg" />
+   <EmbeddedResource Include="./IconComponents/Outlines.svg" Pack="true" LogicalName="NuGet.Icons.IconComponents.Outlines.svg" />
+   <EmbeddedResource Include="./IconComponents/SquareTile.svg" Pack="true" LogicalName="NuGet.Icons.IconComponents.SquareTile.svg" />
+   <EmbeddedResource Include="./IconComponents/Fill.svg" Pack="true" LogicalName="NuGet.Icons.IconComponents.Fill.svg" />
+ </ItemGroup>
+ <Import Project="./build/nuget-icons.targets" />
+ <Target Name="GetRandomIcon" AfterTargets="Pack">
+    <CallTarget Targets="GetRandomNuGetIcon" />
+ </Target>
 </Project>

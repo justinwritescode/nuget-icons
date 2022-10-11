@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:svgjs="http://svgjs.com/svgjs"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="288"
+     height="288">
+  <path fill="COLOR"
+        d="M 144,0 C 5,0 0,5 0,144 0,283 5,288 144,288 283,288 288,283 288,144 288,5 283,0 144,0 Z"
+        transform="translate(30.01 30.01) scale(.7916)" />
+</svg>

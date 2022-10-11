@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Sdk Name="MetapackageSdk" />
+  <PropertyGroup>
+    <IncludeInSolutionFile>false</IncludeInSolutionFile>
+    <SlnGenFolders>true</SlnGenFolders>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="./src/nuget-icons/nuget-icons.csproj" />
+    <ProjectReference Include="./tests/nuget-icons-test/nuget-icons-test.csproj" />
+  </ItemGroup>
+</Project>
